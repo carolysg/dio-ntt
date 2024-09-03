@@ -1,11 +1,11 @@
-from datetime import datetime
+# Resolução obtida em: https://github.com/digitalinnovationone/trilha-python-dio/blob/main/01%20-%20Estrutura%20de%20dados/desafio.py
+
 import textwrap
 
 
 def menu():
     menu = """\n
     ================ MENU ================
-    Qual operação deseja realizar? Digite a opção correspondente:
     [d]\tDepositar
     [s]\tSacar
     [e]\tExtrato
@@ -20,7 +20,7 @@ def menu():
 def depositar(saldo, valor, extrato, /):
     if valor > 0:
         saldo += valor
-        extrato += f"{datetime.now().strftime('%Y-%m-%d %H:%M')} - Depósito:\tR$ {valor:.2f}\n"
+        extrato += f"Depósito:\tR$ {valor:.2f}\n"
         print("\n=== Depósito realizado com sucesso! ===")
     else:
         print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
@@ -44,7 +44,7 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
 
     elif valor > 0:
         saldo -= valor
-        extrato += f"{datetime.now().strftime('%Y-%m-%d %H:%M')} - Saque:\t\tR$ {valor:.2f}\n"
+        extrato += f"Saque:\t\tR$ {valor:.2f}\n"
         numero_saques += 1
         print("\n=== Saque realizado com sucesso! ===")
 

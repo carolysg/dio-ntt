@@ -1,8 +1,6 @@
-from datetime import datetime
+# Resolução obtida em: https://github.com/digitalinnovationone/trilha-python-dio/blob/main/00%20-%20Fundamentos/desafio.py
 
 menu = """
-
-Qual operação deseja realizar? Digite a opção correspondente:
 
 [d] Depositar
 [s] Sacar
@@ -26,7 +24,7 @@ while True:
 
         if valor > 0:
             saldo += valor
-            extrato += f"{datetime.now().strftime('%Y-%m-%d %H:%M')} - Depósito: R$ {valor:.2f}\n"
+            extrato += f"Depósito: R$ {valor:.2f}\n"
 
         else:
             print("Operação falhou! O valor informado é inválido.")
@@ -51,7 +49,7 @@ while True:
 
         elif valor > 0:
             saldo -= valor
-            extrato += f"{datetime.now().strftime('%Y-%m-%d %H:%M')} - Saque: R$ {valor:.2f}\n"
+            extrato += f"Saque: R$ {valor:.2f}\n"
             numero_saques += 1
 
         else:
